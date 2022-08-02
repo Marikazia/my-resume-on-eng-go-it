@@ -21,16 +21,16 @@ $col-gr-59: #595959
 $title-bg-col1: #4c6154
 $title-bg-col2: #607762
 $title-bg-col3: #778f80
+$footer-bg-col1: rgba(96,119,98, 0.2)
 
 .body
 	background-color: #c5c5c5
 
+.total-conteiner
+	display: flex
+
 .main-conteiner
 	font-family: 'Montserrat', sans-serif
-    // display: flex
-    // flex-direction: row-reverse
-	display: grid
-	grid-template-columns: 1fr 2.5fr
 	max-width: 1200px
 	background-color: $r-bg-color
 	margin: 40px auto
@@ -343,5 +343,43 @@ h4
 //     font-size: 20px
 //     font-weight: 700px
 //     color: $text-black
+
+/* Footer */
+
+.footer-base
+	display: flex
+	flex-direction: row
+	height: 100px
+	width: 100%
+	background-color: $footer-bg-col1
+	margin: auto
+	box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1)
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 20px 0 20px 0
+
+.footer-descriptoin-ul
+	// margin-left: -10%
+	padding-inline-start: 0px
+
+.footer-descriptoin-li
+	list-style-type: none
+	color: $text-black
+
+.footer-descriptoin-fp
+	color: $text-grey
+
+.social
+	width: 40%
+	margin-left: 20%
+	display: grid
+	grid-template-columns: repeat(auto-fit, 120px)
+	text-decoration: none
+	align-items: center
+	justify-content: end
+
+.fa
+	color: $sidebar-bg
 
 @import '_media.sass'
