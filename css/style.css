@@ -35,10 +35,11 @@ h4 {
 
 /* Sidebar section */
 .sidebar-section {
-  display: grid;
+  display: block;
   background-color: #607762;
   justify-content: center;
   align-items: center;
+  width: 30%;
 }
 
 .sidebar-section-img {
@@ -128,6 +129,7 @@ h4 {
 .main-content-section {
   position: relative;
   margin-top: 0px;
+  width: 70%;
 }
 
 /* About me */
