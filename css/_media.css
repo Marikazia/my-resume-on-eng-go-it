@@ -1,25 +1,56 @@
 @charset "UTF-8";
 @media (max-width: 991.98px) {
-  .main-conteiner {
-    display: grid;
-    grid-template-columns: 0.9fr 2fr;
+  h3 {
+    font-size: 18px;
   }
-  /* Sidebar section */
+  .main-conteiner {
+    display: flex;
+    flex-direction: column;
+    /* Sidebar section */
+  }
+  .sidebar-section {
+    display: block;
+    width: 25%;
+  }
+  .sidebar-section-img-small {
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-content-section {
+    width: 75%;
+  }
+  .sidebar-title {
+    font-size: 18px;
+  }
   .contact-section-type {
-    margin-left: 10px;
+    margin-left: 0px;
+    font-size: 12px;
   }
   .contact-section-link {
-    font-size: 15px;
+    font-size: 12px;
   }
-  .tech-skills-section, .soft-skills-section {
+  .contact-section-ul, .tech-skills-list, .soft-skills-list {
+    margin: 10px 0;
+  }
+  .tech-skills-section, .soft-skills-section, .language-knowledges-section {
     margin: 0 20px;
   }
   .tech-skills-item, .soft-skills-item {
     margin-left: -10px;
   }
+  .tech-skills-item-text, .soft-skills-item-text, .soft-skills-item-text {
+    font-size: 12px;
+    line-height: 16px;
+  }
   /* Main content section */
+  .about-me-name {
+    font-size: 30px;
+    line-height: 40px;
+  }
   .about-me-description {
     font-size: 16px;
+    margin: 15px 20px;
   }
   /* My projects */
   .my-project-section {
@@ -32,7 +63,13 @@
   .my-work-experience {
     margin-top: 5px;
   }
+  .my-work-experience-section {
+    margin-left: 20px;
+  }
   /* My education */
+  .my-education-section {
+    margin: 0 20px;
+  }
   .my-education-block {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -48,50 +85,51 @@
   .certificate-img-one:hover {
     transform: scale(2.5);
   }
+  .footer-base {
+    width: 100%;
+  }
+  .social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 70px);
+    text-decoration: none;
+    align-items: center;
+    justify-content: end;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .total-conteiner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .main-conteiner {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
   .sidebar-section {
-    grid-area: "main-conteiner";
-    position: relative;
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .main-content-section {
-    grid-area: "main-conteiner";
-    position: relative;
-    grid-column: 1/2;
-    grid-row: 2/3;
     width: 100%;
-  }
-  .sidebar-section {
-    display: grid;
-    align-items: start;
-    grid-template-rows: 0.5fr 1fr 2fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "about-me-name-prof", "sidebar-section-img", "contact-section", "tech-skills-section", "soft-skills-section", "language-knowledges-section";
   }
   .sidebar-section-img {
     display: none;
   }
+  .sidebar-title {
+    font-size: 22px;
+  }
+  .tech-skills-item-text, .soft-skills-item-text, .soft-skills-item-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .main-content-section {
+    width: 100%;
+  }
   .sidebar-section-img-small {
     display: block;
-    grid-area: "sidebar-section";
     position: relative;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    width: 80%;
   }
   .about-me-name-prof-side {
     display: inline;
-    grid-area: "sidebar-section";
-    grid-column: 1/3;
-    grid-row: 1/2;
   }
   .about-me-name {
     font-size: 30px;
@@ -104,17 +142,16 @@
   .about-me-name-prof {
     display: none;
   }
+  /*	contact section	*/
   .contact-section {
-    grid-area: "sidebar-section";
-    position: relative;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin-left: -20px;
     margin-top: 30px;
-    font-size: 14px;
+    font-size: 18px;
   }
   .contact-section-link {
-    font-size: 13px;
+    font-size: 18px;
+  }
+  .contact-section-type {
+    font-size: 18px;
   }
   .tech-skills-section {
     grid-area: "sidebar-section";
@@ -155,10 +192,24 @@
   .my-certificates-section {
     margin-left: 15px;
   }
-  .my-certificates-block {
+  .my-certificates-section-block {
     margin-top: 10px;
   }
   .certificate-img-one {
     width: 100%;
+  }
+  .footer-base {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-descriptoin-ul {
+    margin-left: 5%;
+  }
+  .social {
+    width: 70%;
+    margin-left: 5%;
+    justify-content: center;
   }
 }
